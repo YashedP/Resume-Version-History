@@ -1,0 +1,275 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-9pt}
+    % \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Yash Jani} \\ \vspace{1pt}
+    % Location is only good not in college because they can figure it out
+    % REDACTED \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 631-202-7811 ~ \href{mailto:yashjani144@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{yashjani144@gmail.com}} ~ 
+    \href{https://www.linkedin.com/in/yash-jani-8245bb26a/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/Yash Jani}}  ~
+    % \href{https://github.com/YashedP}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/YashedP}}
+    \vspace{-10pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading      
+      {Florida Institute of Technology}{Aug 2023 -- Dec 2025}
+      {Bachelor of Science in Computer Science}{\textbf{GPA: 3.95} | Melbourne, Florida}
+  \resumeSubHeadingListEnd
+  \vspace{-8pt}
+  % \resumeSubHeadingListStart
+  %   \resumeSubheading      
+  %     {Sachem North High School}{Sep 2019 -- June 2023}
+  %     {Advanced Regents Diploma}{Ronkonkoma, New York}
+  % \resumeSubHeadingListEnd
+  
+%------RELEVANT COURSEWORK-------
+  \vspace{-5pt}
+  \section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item Data Structures 2
+                \item Prog Lang Concepts
+                \item Operating Systems
+                \item Formal Lang/Auto
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\vspace{-5pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \vspace{-2pt} % Decrease the spacing between projects
+    \resumeSubheading
+      {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{January 2025 -- Present}
+      {Undergraduate Researcher}{Melbourne, Florida}
+      \resumeItemListStart
+        \resumeItem{Enhanced an existing ML pipeline for generating medical images from SPECT scan data by optimizing data processing, improving model accuracy, cataloging, and augmentation, creating synthetic data aligned with patient demographics}
+        \resumeItem{Integrated federated learning for secure, decentralized data sharing with automated contributor management, training sync, and authentication. Evaluated security and deployment strategies for UI access and model transport}
+    \resumeItemListEnd
+    \vspace{-3pt} % Decrease the spacing between projects
+    \resumeSubheading
+      {\textbf{Neural Transmissions Lab} $|$ \emph{Python, PyTorch, Blender}}{January 2025 -- Present}      
+      {Undergraduate Researcher}{Melbourne, Florida}
+      \resumeItemListStart
+        \resumeItem{Developing MARVIN (Multipurpose Autonomous Rendezvous Vision-Integrated Navigation) to coordinate drone swarms, implementing APF (Artificial Potential Field) algorithms for collision-free navigation and docking on space debris}
+        \resumeItem{Created a simulated physics environment to test MARVIN's navigation and APF algorithms using YOLOv9 and with 3D Guassian Splatting for satellite geometry with successful deployment on NVIDIA Jetson Orin and ORION testbed}
+    \resumeItemListEnd
+    \vspace{-3pt} % Decrease the spacing between projects
+    \resumeSubheading
+      {\textbf{Robotics Team 263, Sachem Aftershock} $|$ \emph{Java, C++}}{September 2018 -- August 2023}
+      {Assistant Lead Programmer}{Ronkonkoma, New York}
+      \resumeItemListStart
+        \resumeItem{Collaborated on a team and designed, programmed, and modified complete functional FRC robots, using WPILIB}
+        \resumeItem{Developed and optimized vision systems with April Tags, Odometry, and Kalman filters for Robot pose estimation, while also training newcomers and designing key components i.e the intake and control systems}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\vspace{-17pt}
+\section{Projects}
+  \vspace{-7pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{HelpSignal} $|$ \emph{React Native, Flask, AWS, Cloudflare Workers, Typescript, Python}}{October 2024}
+          \resumeItemListStart
+            \resumeItem{Developed a React Native app with three teammates at HackHarvard that uses live voice transcription and Cloudflare Workers to connect individuals in need with certified medical professionals, accelerating emergency response times}
+            \resumeItem{Integrated a vector database and used Cloudflare Workers to match the appropriate CPR experts, EMTs, and medical professionals based on real-time emergency categories, displayed on an interactive map}
+            \resumeItem{Designed the app's UI, allowing users to report emergencies for nearest, most applicable professionals, ensuring quick responses during high-pressure situations}
+        \resumeItemListEnd
+      \vspace{-20pt} % Decrease the spacing between projects
+      \resumeProjectHeading
+          {\textbf{TravelAmulet} $|$ \emph{NextJS, React, Typescript, Python, Flask, Prisma, TidB Cloud, mySQL}}{August 2024}
+          \resumeItemListStart
+            \resumeItem{Worked with a teammate to develop a web application where users take a quiz for travel preferences, and uses TidB Vector Search to return a list of matching countries, each with an overview and a list of top cities}
+            \resumeItem{Optimized Vector Search by 2,000\% by implementing metadata filters, cleaning data, and other optimizations to streamline the search process, ensuring more accurate and relevant country suggestions based on quiz preferences}
+            \resumeItem{Implemented Google Maps API to find the top cities, and upon selecting one, find nearby hotels and display a map of the city. Nearby airports and flight prices are also displayed using Amadeus API}
+            \resumeItem{Built an account and user management system using NextAuth, Prisma, and MySQL, and a visually appealing UI/UX using React and Three.js that communicates efficiently with the server}
+          \resumeItemListEnd
+      % \vspace{-20pt} % Decrease the spacing between projects
+      % \resumeProjectHeading
+      %     {\textbf{Interactive Bubble Popping} $|$ \emph{Python, CV2, Mediapipe}}{January 2023}
+      %     \resumeItemListStart
+      %       \resumeItem{Utilized computer vision to engineer an engaging user experience by integrating Bézier curves to create the paths of the bubbles to create and animate bubbles on-screen}
+      %       \resumeItem{Utilized Mediapipe's finger-tracking capabilities to track the user's hands}
+      %     \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\vspace{-17pt}
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C, C++, Java, Rust, R, Python, HTML/CSS, JavaScript, Typescript, SQL, MATLAB} \\
+     \textbf{Technologies/Frameworks}{: Linux, Bootstrap, NextJS, React, Prisma, Flask, Node, CV2, AWS, PyTorch, Blender} \\
+    }}
+ \end{itemize}
+\vspace{-20pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \resumeSubHeadingListStart
+        \resumeSubheading{FIRSTCommunityProject}{January 2023 -- Present}
+        {Co-Founder}{Sachem North High School}
+            \resumeItemListStart
+                \resumeItem{Co-founded a donation program connecting 70 Long Island FIRST Robotics teams with 50+ underfunded NYC teams}
+                \resumeItem{Coordinated with local legislators and NYC FIRST STEM Center to establish donation logistics and distribution system}
+                \resumeItem{Identified resource gaps at NYC 2022 Regional competition and initiated material support for teams lacking vital parts}
+                \resumeItem{Met with New York Representatives Andrew Garbarino and Nick LaLota, and Senators Chuck Schumer and Kirsten Gillibrand in Capitol Hill to advocate for increased STEM funding through ESSA and Chips and Science Act of 2022}
+            \resumeItemListEnd
+        \resumeSubheading{FITSEC, CTF Team}{August 2023 -- Present}{Member}{Florida Institute of Technology}
+        % \resumeSubheading{MATLAB}{August 2023 -- Present}{Member}{Florida Institute of Technology}
+        \resumeSubheading{Student Developer Club at Florida Tech}{August 2024 -- Present}{Co-Founder}{Florida Institute of Technology}
+        
+    \resumeSubHeadingListEnd
+\vspace{-20pt}
+
+% \section{Skills}
+%     %\resumeSubHeadingListStart
+%         \begin{multicols}{4}
+%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
+%                 \item Collaborative
+%                 \item Team Player
+%                 \item Adept Learner
+%                 \item Leadership
+%         \end{itemize}
+%         \end{multicols}
+%         \vspace*{2.0\multicolsep}
+%     %\resumeSubHeadingListEnd
+
+\begin{center}
+    References Available upon Request
+\end{center}
+
+\end{document}
