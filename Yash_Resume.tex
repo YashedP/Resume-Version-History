@@ -183,8 +183,8 @@
       {Software Engineer Intern}{Melbourne, Florida}
       \resumeItemListStart
         \resumeItem{Spearheaded a major cost-saving initiative by replacing a legacy Lambda-based caching mechanism with native Redis TTLs, enabling decommissioning of a cross-region MongoDB instance and reducing the service's codebase by 60\%}
-        \resumeItem{Engineered a new "force delete" feature across the full service stack, modifying a Node.js Lambda, extending a DynamoDB stream-triggered Step Function with a new state, and updating API Gateway endpoints using Swagger}
-        \resumeItem{Architected and developed a custom Go-based JWT authorizer for API Gateway from the ground up, enforcing PKCS\#8/PKIX key standards to secure critical API endpoints, and created the corresponding Java client library for seamless integration by other teams}
+        \resumeItem{Owned the end-to-end implementation of a new API capability, orchestrating changes across a Node.js Lambda, a DynamoDB stream-triggered Step Function, and the API Gateway via its OpenAPI specification}
+        \resumeItem{Architected and developed a custom Go-based JWT authorizer for API Gateway, enforcing PKCS\#8/PKIX keys standards to secure API endpoints, and created the Java client library for seamless integration by other teams}
         \resumeItem{Accelerated the development of a complex, event-driven data pipeline by implementing key serverless components and integrating services including DynamoDB Streams, SQS, Lambda, and Step Functions using Terraform for deployment}
         \resumeItem{Proactively identified and resolved database bottlenecks by re-architecting indexes on a production RDS table, significantly improving query performance and eliminating a class of recurring performance-related incidents}
         \resumeItem{Resolved 15+ backend bugs and critical Node.js vulnerabilities in a production microservices codebase, improving system reliability and security posture while deploying all changes through an automated CI/CD pipeline using Terraform}
@@ -231,6 +231,7 @@
       \resumeProjectHeading
           {\textbf{TravelAmulet} $|$ \emph{NextJS, React, Typescript, Python, Flask, Prisma, TidB Cloud, mySQL}}{Aug 2024}
           \resumeItemListStart
+            \resumeItem{Worked with a teammate to develop a web application where users take a quiz for travel preferences, and uses TidB Vector Search to return a list of matching countries, each with an overview and a list of top cities}
             \resumeItem{Optimized Vector Search by 2,000\% by implementing metadata filters, cleaning data, and other optimizations to streamline the search process, ensuring more accurate and relevant country suggestions based on quiz preferences}
             \resumeItem{Implemented Google Maps API to find the top cities, and upon selecting one, find nearby hotels and display a map of the city. Nearby airports and flight prices are also displayed using Amadeus API}
             \resumeItem{Built an account and user management system using NextAuth, Prisma, and MySQL, and a visually appealing UI/UX using React and Three.js that communicates efficiently with the server}
