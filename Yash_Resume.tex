@@ -167,6 +167,7 @@
         \begin{multicols}{3}
             \begin{itemize}[itemsep=-5pt, parsep=5pt]
               \item AWS Cloud Practitioner
+              \item AWS Solutions Architect
             \end{itemize}
         \end{multicols}
 \vspace*{2.0\multicolsep}
@@ -178,14 +179,15 @@
   \resumeSubHeadingListStart
     \vspace{-2pt} % Decrease the spacing between projects
     \resumeSubheading
-      {\textbf{ALTR} $|$ \emph{AWS, JavaScript, GoLang, Node.js, Snowflake, Databricks, Express, DynamoDB, Redis}}{May 2025 -- Present}
+      {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, API Gateway, RDS, S3), Terraform, Redis}}{May 2025 -- Present}
       {Software Engineer Intern}{Melbourne, Florida}
       \resumeItemListStart
-        \resumeItem{Fixed backend bugs and patched Node.js vulnerabilities in a large-scale, production-grade microservices codebase}
-        \resumeItem{Used AWS CloudWatch, Lambda, and Step Functions to debug and monitor issues across microservices in the cloud}
-        \resumeItem{Modified Terraform scripts to support infrastructure-as-code and streamline cloud resource management}
-        \resumeItem{Updated CI/CD pipeline links to improve deployment workflows and maintain infrastructure integration}
-        \resumeItem{Quickly ramped up on backend systems by resolving tickets and collaborating with engineers}
+        \resumeItem{Spearheaded a major cost-saving initiative by replacing a legacy Lambda-based caching mechanism with native Redis TTLs, enabling the complete decommissioning of a cross-region MongoDB instance and reducing the service's codebase by 60\%}
+        \resumeItem{Engineered a new "force delete" feature across the full service stack, modifying a Node.js Lambda, extending a DynamoDB stream-triggered Step Function with a new state, and updating API Gateway endpoints using Swagger}
+        \resumeItem{Architected and developed a custom Go-based JWT authorizer for API Gateway from the ground up, enforcing PKCS\#8/PKIX key standards to secure critical API endpoints, and created the corresponding Java client library for seamless integration by other teams}
+        \resumeItem{Accelerated the development of a complex, event-driven data pipeline by implementing key serverless components and integrating services including DynamoDB Streams, SQS, Lambda, and Step Functions using Terraform for deployment}
+        \resumeItem{Proactively identified and resolved database bottlenecks by re-architecting indexes on a production RDS table, significantly improving query performance and eliminating a class of recurring performance-related incidents}
+        \resumeItem{Resolved 15+ backend bugs and critical Node.js vulnerabilities in a production microservices codebase, improving system reliability and security posture while deploying all changes through an automated CI/CD pipeline using Terraform}
       \resumeItemListEnd
     \vspace{-5pt}
     \resumeSubheading
