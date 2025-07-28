@@ -47,8 +47,8 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -119,7 +119,7 @@
 \begin{document}
 
 \begin{center}
-    {\Huge \scshape Yash Jani} \\ \vspace{1pt}
+  {\Huge \scshape Yash Jani} \\ \vspace{1pt}
     % Location is only good not in college because they can figure it out
     % REDACTED \\ \vspace{1pt}
     \small
@@ -130,7 +130,6 @@
             % \href{https://github.com/YashedP}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/YashedP}}
     \vspace{-10pt}
 \end{center}
-
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -180,62 +179,64 @@
   \resumeSubHeadingListStart
     \vspace{0pt}
     \resumeSubheading
-      {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Terraform, Redis}}{May 2025 -- Present}
-      {Software Engineer Intern}{Melbourne, Florida}
-      \resumeItemListStart
-        \resumeItem{Enabled the launch of a key client product over a week ahead of schedule by engineering its core data pipeline from the ground up, using an event-driven architecture with SQS, Lambda, DynamoDB streams, and Step Functions}
-        \resumeItem{Further secured the product by architecting and delivering a Go-based JWT authorizer and Java client library}
-        \resumeItem{Slashed annual infrastructure costs by \textbf{\$10,000+} by replacing a microservice with Redis, enabling MongoDB deprecation}
-        \resumeItem{Improved query performance by over \textbf{99\%} by re-architecting RDS indexes and new DynamoDB GSIs via Terraform}
-      \resumeItemListEnd
-    \vspace{0pt}
-    \resumeSubheading
-      {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{Jan 2025 -- Present}
-      {Undergraduate Researcher}{Melbourne, Florida}
-      \resumeItemListStart
-        \resumeItem{Enhanced an existing ML pipeline for generating medical images from SPECT scan data by optimizing data processing, improving model accuracy, cataloging, and augmentation, creating synthetic data aligned with patient demographics}
-        \resumeItem{Integrated federated learning for secure, decentralized data sharing with automated contributor management, training sync, and authentication. Evaluated security and deployment strategies for UI access and model transport}
-      \resumeItemListEnd
-    \vspace{0pt}
-    \resumeSubheading
-      {\textbf{Neural Transmissions Lab} $|$ \emph{Python, PyTorch, Blender}}{Jan 2025 -- May 2025}      
-      {Undergraduate Researcher}{Melbourne, Florida}
-      \resumeItemListStart
-        \resumeItem{Developing MARVIN (Multipurpose Autonomous Rendezvous Vision-Integrated Navigation) to coordinate drone swarms, implementing APF (Artificial Potential Field) algorithms for collision-free navigation and docking on space debris}
-        \resumeItem{Created a simulated physics environment to test MARVIN's navigation and APF algorithms using YOLOv9 and with 3D Guassian Splatting for satellite geometry with successful deployment on NVIDIA Jetson Orin and ORION testbed}
-      \resumeItemListEnd
-    \vspace{0pt}
-    \resumeSubheading
-      {\textbf{FIRST Robotics Team 263, Sachem Aftershock} $|$ \emph{Java, C++}}{Sep 2018 -- Aug 2023}
-      {Assistant Lead Programmer}{Ronkonkoma, New York}
-      \resumeItemListStart
-        \resumeItem{Developed and optimized vision systems with April Tags, Odometry, and Kalman filters for Robot pose estimation, while also training newcomers and designing key components i.e the intake and control systems}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+    {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Terraform, Redis}}{May 2025 -- Present}
+    {Software Engineer Intern}{Melbourne, Florida}
+    \resumeItemListStart
+      \resumeItem{Enabled the launch of a key client product over a week ahead of schedule by engineering its core data pipeline from the ground up, using an event-driven architecture with SQS, Lambda, and Step Functions}
+      \resumeItem{Further secured the product by architecting and delivering a Go-based JWT authorizer and Java client library}
+      \resumeItem{Slashed annual infrastructure costs by \textbf{\$10,000+} by replacing a microservice with Redis, enabling MongoDB deprecation}
+      \resumeItem{Improved query performance by over \textbf{99\%} by re-architecting RDS indexes and new DynamoDB GSIs via Terraform}
+    \resumeItemListEnd
+  \resumeSubheading
+    {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{Jan 2025 -- Present}
+    {Undergraduate Researcher}{Melbourne, Florida}
+    \resumeItemListStart
+      \resumeItem{Optimized SPECT ML pipeline, improving accuracy and generating synthetic images aligned with patient demographics}
+      \resumeItem{Automated data cataloging and augmentation to enhance training efficiency and demographic coverage}
+      \resumeItem{Integrated federated learning using Flower to enable secure, decentralized model training with contributor authentication}
+      \resumeItem{Evaluated deployment strategies for secure model transport and UI access across federated nodes}
+    \resumeItemListEnd
+  \resumeSubheading
+    {\textbf{Neural Transmissions Lab} $|$ \emph{Python, PyTorch, Blender}}{Jan 2025 -- May 2025}      
+    {Undergraduate Researcher}{Melbourne, Florida}
+    \resumeItemListStart
+      \resumeItem{Integrated drone vision, navigation, and control into a Python pipeline, enabling swarm docking on space debris}
+      \resumeItem{Applied matrix projections to drone camera input to convert point clouds into APF vectors for collision-free rendezvous}
+      \resumeItem{Simulated satellite debris using YOLOv9 and 3D Gaussian Splatting, improving training realism and vision accuracy}
+      \resumeItem{Deployed MARVIN on NVIDIA Jetson Orin and ORION testbed, validating real-time control and vision performance}
+    \resumeItemListEnd
+  \resumeSubheading
+    {\textbf{FIRST Robotics Team 263, Sachem Aftershock} $|$ \emph{Java, C++}}{Sep 2018 -- Aug 2023}
+    {Assistant Lead Programmer}{Ronkonkoma, New York}
+    \resumeItemListStart
+      \resumeItem{Developed and optimized vision systems using April Tags, Odometry, and Kalman filters to improve robot pose estimation}
+      \resumeItem{Designed key robot components including the intake and control systems to enhance performance and reliability}
+      \resumeItem{Trained and mentored new team members, accelerating their proficiency in robotics programming}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
-\vspace{-20pt}
+\vspace{-17pt}
 \section{Projects}
   \vspace{-5pt}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{HelpSignal} $|$ \emph{React Native, Flask, AWS, Cloudflare Workers, Typescript, Python}}{Oct 2024}
-          \resumeItemListStart
-            \resumeItem{Developed a React Native app with three teammates at HackHarvard that uses live voice transcription and Cloudflare Workers to connect individuals in need with certified medical professionals, accelerating emergency response times}
-            \resumeItem{Integrated a vector database and used Cloudflare Workers to match the appropriate CPR experts, EMTs, and medical professionals based on real-time emergency categories, displayed on an interactive map}
-            \resumeItem{Designed the app's UI, allowing users to report emergencies for nearest, most applicable professionals, ensuring quick responses during high-pressure situations}
+        {\textbf{HelpSignal} $|$ \emph{React Native, Flask, AWS, Cloudflare Workers, Typescript, Python}}{Oct 2024}
+        \resumeItemListStart
+          \resumeItem{Cut emergency response times by building a React Native app that transcribes calls and connects nearby medical pros}
+          \resumeItem{Matched emergencies to responders by using a vector DB with BAAI embeddings for semantic search of expertise}
+          \resumeItem{Enabled real-time awareness by storing active incidents on Amazon RDS and displaying them on an interactive map}
         \resumeItemListEnd
-      \vspace{-18pt}
-      \resumeProjectHeading
-          {\textbf{TravelAmulet} $|$ \emph{NextJS, React, Typescript, Python, Flask, Prisma, TidB Cloud, mySQL}}{Aug 2024}
-          \resumeItemListStart
-            \resumeItem{Worked with a teammate to develop a web application where users take a quiz for travel preferences, and uses TidB Vector Search to return a list of matching countries, each with an overview and a list of top cities}
-            \resumeItem{Optimized Vector Search by 2,000\% by implementing metadata filters, cleaning data, and other optimizations to streamline the search process, ensuring more accurate and relevant country suggestions based on quiz preferences}
-            \resumeItem{Implemented Google Maps API to find the top cities, and upon selecting one, find nearby hotels and display a map of the city. Nearby airports and flight prices are also displayed using Amadeus API}
-            \resumeItem{Built an account and user management system using NextAuth, Prisma, and MySQL, and a visually appealing UI/UX using React and Three.js that communicates efficiently with the server}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+      \vspace{-20pt}
+    \resumeProjectHeading
+        {\textbf{TravelAmulet} $|$ \emph{NextJS, React, Typescript, Python, Flask, Prisma, TidB Cloud, mySQL}}{Aug 2024}
+        \resumeItemListStart
+          \resumeItem{Matched users with travel destinations by building a quiz-based app using TiDB Vector Search and CountryWise API}
+          \resumeItem{Boosted result accuracy by \textbf{20x} through metadata filtering and data cleaning in TiDB queries}
+          \resumeItem{Increased engagement by using GPT-4o mini to generate personalized country explanations from quiz results}          
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
 %-----------PROGRAMMING SKILLS-----------
@@ -320,5 +321,20 @@
 %         \end{multicols}
 %         \vspace*{2.0\multicolsep}
 %     %\resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+  \vspace{-5pt}
+  \section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item Data Structures 2
+                \item Prog Lang Concepts
+                \item Operating Systems
+                \item Formal Lang/Auto
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
 
 \end{document}
