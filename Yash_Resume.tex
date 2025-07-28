@@ -105,6 +105,7 @@
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\setlist[itemize]{leftmargin=0.2in, labelwidth=0.1in, labelsep=0.05in}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -122,9 +123,9 @@
     % Location is only good not in college because they can figure it out
     % REDACTED \\ \vspace{1pt}
     \small
-    \raisebox{-0.2\height}{\faEnvelope}~\href{mailto:yashjani144@gmail.com}{yashjani144@gmail.com} ~
-    \raisebox{-0.1\height}{\faPhone}~\href{tel:6312027811}{631-202-7811} ~
-    \raisebox{-0.2\height}{\faLinkedin}~\href{https://www.linkedin.com/in/yash-jani-8245bb26a/}{linkedin.com/in/Yash Jani} ~
+    \raisebox{-0.2\height}{\faEnvelope}~\href{mailto:REDACTED}{REDACTED} ~
+    \raisebox{-0.1\height}{\faPhone}~\href{tel:REDACTED}{REDACTED} ~
+    \raisebox{-0.2\height}{\faLinkedin}~\href{https://www.linkedin.com/in/REDACTED}{linkedin.com/in/REDACTED} ~
     US Citizen
             % \href{https://github.com/YashedP}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/YashedP}}
     \vspace{-10pt}
@@ -138,7 +139,7 @@
       {Florida Institute of Technology}{Aug 2023 -- Dec 2025}
       {Bachelor of Science in Computer Science}{\textbf{GPA: 3.8} | Melbourne, Florida}
   \resumeSubHeadingListEnd
-  \vspace{-8pt}
+  \vspace{-5pt}
   % \resumeSubHeadingListStart
   %   \resumeSubheading      
   %     {Sachem North High School}{Sep 2019 -- June 2023}
@@ -174,22 +175,20 @@
 
 
 %-----------EXPERIENCE-----------
-\vspace{-5pt}
+\vspace{0pt}
 \section{Experience}
   \resumeSubHeadingListStart
-    \vspace{-2pt} % Decrease the spacing between projects
+    \vspace{0pt}
     \resumeSubheading
       {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Terraform, Redis}}{May 2025 -- Present}
       {Software Engineer Intern}{Melbourne, Florida}
       \resumeItemListStart
-        \resumeItem{Spearheaded a major cost-saving initiative by replacing a legacy Lambda-based caching mechanism with native Redis TTLs, enabling decommissioning of a cross-region MongoDB instance and reducing the service's codebase by 60\%}
-        \resumeItem{Owned the end-to-end implementation of a new API capability, orchestrating changes across a Node.js Lambda, a DynamoDB stream-triggered Step Function, and modifying the API's OpenAPI (Swagger) specification}
-        \resumeItem{Architected and developed a custom Go-based JWT authorizer flow using API Gateway, enforcing PKCS\#8/PKIX key standards to secure API endpoints, and created the Java client library for seamless integration by other teams}
-        \resumeItem{Accelerated the development of a complex, event-driven data pipeline by implementing key serverless components and integrating services including DynamoDB Streams, SQS, Lambda, and Step Functions using Terraform for deployment}
-        \resumeItem{Proactively identified and resolved database bottlenecks by re-architecting indexes on a production RDS table, significantly improving query performance and resolving a class of recurring performance issues}
-        \resumeItem{Resolved 15+ backend bugs and critical Node.js vulnerabilities in a production microservices codebase, improving system reliability and security posture while deploying all changes through an automated CI/CD pipeline using Terraform}
+        \resumeItem{Enabled the launch of a key client product over a week ahead of schedule by engineering its core data pipeline from the ground up, using an event-driven architecture with SQS, Lambda, DynamoDB streams, and Step Functions}
+        \resumeItem{Further secured the product by architecting and delivering a Go-based JWT authorizer and Java client library}
+        \resumeItem{Slashed annual infrastructure costs by \textbf{\$10,000+} by replacing a microservice with Redis, enabling MongoDB deprecation}
+        \resumeItem{Improved query performance by over \textbf{99\%} by re-architecting RDS indexes and new DynamoDB GSIs via Terraform}
       \resumeItemListEnd
-    \vspace{-5pt}
+    \vspace{0pt}
     \resumeSubheading
       {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{Jan 2025 -- Present}
       {Undergraduate Researcher}{Melbourne, Florida}
@@ -197,7 +196,7 @@
         \resumeItem{Enhanced an existing ML pipeline for generating medical images from SPECT scan data by optimizing data processing, improving model accuracy, cataloging, and augmentation, creating synthetic data aligned with patient demographics}
         \resumeItem{Integrated federated learning for secure, decentralized data sharing with automated contributor management, training sync, and authentication. Evaluated security and deployment strategies for UI access and model transport}
       \resumeItemListEnd
-    \vspace{-5pt} % Decrease the spacing between projects
+    \vspace{0pt}
     \resumeSubheading
       {\textbf{Neural Transmissions Lab} $|$ \emph{Python, PyTorch, Blender}}{Jan 2025 -- May 2025}      
       {Undergraduate Researcher}{Melbourne, Florida}
@@ -205,7 +204,7 @@
         \resumeItem{Developing MARVIN (Multipurpose Autonomous Rendezvous Vision-Integrated Navigation) to coordinate drone swarms, implementing APF (Artificial Potential Field) algorithms for collision-free navigation and docking on space debris}
         \resumeItem{Created a simulated physics environment to test MARVIN's navigation and APF algorithms using YOLOv9 and with 3D Guassian Splatting for satellite geometry with successful deployment on NVIDIA Jetson Orin and ORION testbed}
       \resumeItemListEnd
-    \vspace{-5pt} % Decrease the spacing between projects
+    \vspace{0pt}
     \resumeSubheading
       {\textbf{FIRST Robotics Team 263, Sachem Aftershock} $|$ \emph{Java, C++}}{Sep 2018 -- Aug 2023}
       {Assistant Lead Programmer}{Ronkonkoma, New York}
@@ -216,9 +215,9 @@
 
 
 %-----------PROJECTS-----------
-\vspace{-17pt}
+\vspace{-20pt}
 \section{Projects}
-  \vspace{-7pt}
+  \vspace{-5pt}
     \resumeSubHeadingListStart
       \resumeProjectHeading
           {\textbf{HelpSignal} $|$ \emph{React Native, Flask, AWS, Cloudflare Workers, Typescript, Python}}{Oct 2024}
@@ -227,7 +226,7 @@
             \resumeItem{Integrated a vector database and used Cloudflare Workers to match the appropriate CPR experts, EMTs, and medical professionals based on real-time emergency categories, displayed on an interactive map}
             \resumeItem{Designed the app's UI, allowing users to report emergencies for nearest, most applicable professionals, ensuring quick responses during high-pressure situations}
         \resumeItemListEnd
-      \vspace{-20pt} % Decrease the spacing between projects
+      \vspace{-18pt}
       \resumeProjectHeading
           {\textbf{TravelAmulet} $|$ \emph{NextJS, React, Typescript, Python, Flask, Prisma, TidB Cloud, mySQL}}{Aug 2024}
           \resumeItemListStart
@@ -236,18 +235,11 @@
             \resumeItem{Implemented Google Maps API to find the top cities, and upon selecting one, find nearby hotels and display a map of the city. Nearby airports and flight prices are also displayed using Amadeus API}
             \resumeItem{Built an account and user management system using NextAuth, Prisma, and MySQL, and a visually appealing UI/UX using React and Three.js that communicates efficiently with the server}
           \resumeItemListEnd
-      % \vspace{-20pt} % Decrease the spacing between projects
-      % \resumeProjectHeading
-      %     {\textbf{Interactive Bubble Popping} $|$ \emph{Python, CV2, Mediapipe}}{January 2023}
-      %     \resumeItemListStart
-      %       \resumeItem{Utilized computer vision to engineer an engaging user experience by integrating Bézier curves to create the paths of the bubbles to create and animate bubbles on-screen}
-      %       \resumeItem{Utilized Mediapipe's finger-tracking capabilities to track the user's hands}
-      %     \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
 %-----------PROGRAMMING SKILLS-----------
-\vspace{-17pt}
+\vspace{-20pt}
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
@@ -328,9 +320,5 @@
 %         \end{multicols}
 %         \vspace*{2.0\multicolsep}
 %     %\resumeSubHeadingListEnd
-
-\begin{center}
-    References Available upon Request
-\end{center}
 
 \end{document}
