@@ -19,7 +19,7 @@ After each single-line modification only, run all checks below immediately; do n
 This is a hard gate for commits and pushes.
 
 ## Preview in WSL
-Use this command to open the PDF on this machine:
+Use this command to open the PDF on this machine after all planned edits are complete (not after each individual edit):
 `powershell.exe -NoProfile -Command "Start-Process 'C:\\Users\\yashj\\Documents\\Coding Projects\\Resume-Version-History\\Yash_Resume.pdf'"`
 
 ## Commit Expectations
