@@ -9,7 +9,7 @@ This repo maintains a single-page LaTeX resume. Keep changes concise, readable, 
 - Generated files (`Yash_Resume.pdf`, `*.aux`, `*.log`, `*.out`) are outputs, not hand-edited sources.
 
 ## Required Validation (Every Change)
-After any modification in this repository, run all checks below:
+After each single-line modification only, run all checks below immediately; do not make multi-line or batched edits before validating.
 1. Build: `make build`
 2. Confirm build success (exit code `0`).
 3. Confirm one-page output from log:
