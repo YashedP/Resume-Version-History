@@ -1,37 +1,28 @@
 # Repository Guidelines
 
-## Project Structure & Module Organization
-- `Yash_Resume.tex`: Primary source file for the resume (all sections, macros, and content).
-- `makefile`: Convenience targets for setup and build.
-- Generated artifacts: `Yash_Resume.pdf`, `*.aux`, `*.log`, `*.out`.
-- Keep edits focused on `Yash_Resume.tex`; do not manually edit generated files.
+## Purpose
+This repo maintains a single-page LaTeX resume. Keep changes concise, readable, and layout-safe.
 
-## Build, Test, and Development Commands
-- `make build`: Compiles the resume PDF using `pdflatex Yash_Resume.tex`.
-- `pdflatex -interaction=nonstopmode -halt-on-error Yash_Resume.tex`: Strict local compile that fails fast on LaTeX errors.
-- `make setup`: Installs TeX dependencies (uses `apt`/`tlmgr`; run only on machines where system package installs are acceptable).
-- Optional cleanup: `rm -f *.aux *.log *.out` to remove intermediate files before a clean rebuild.
+## What to Edit
+- Main source: `Yash_Resume.tex`
+- Build helper: `makefile`
+- Generated files (`Yash_Resume.pdf`, `*.aux`, `*.log`, `*.out`) are outputs, not hand-edited sources.
 
-## Coding Style & Naming Conventions
-- Follow existing LaTeX formatting and macro usage in `Yash_Resume.tex` (e.g., `\resumeSubheading`, `\resumeItem`).
-- Preserve two-space indentation inside environments and keep one logical field per line for readable diffs.
-- Use consistent date formatting: `Mon YYYY -- Mon YYYY` (or `Mon YYYY -- Present`).
-- Keep bullet points concise, action-first, and impact-oriented (include metrics when available).
+## Required Validation (Every Change)
+After any modification in this repository, run all checks below:
+1. Build: `make build`
+2. Confirm build success (exit code `0`).
+3. Confirm one-page output from log:
+   `rg "Output written on Yash_Resume.pdf \\(1 page," Yash_Resume.log`
+4. If the page check fails, revise content/layout and rebuild until it passes.
 
-## Testing Guidelines
-- There is no automated unit-test framework; compilation is the validation step.
-- Minimum check before commit: run `make build` and ensure exit code `0`.
-- Review LaTeX warnings in terminal/log (e.g., overfull boxes) and resolve when practical.
-- Manually inspect `Yash_Resume.pdf` for layout regressions and one-page fit.
+This is a hard gate for commits and pushes.
 
-## Commit & Pull Request Guidelines
-- Current history favors short, direct commit messages (examples: `Small wording change`, `added backend`).
-- Prefer imperative, scoped messages such as `update ALTR title` or `refine project bullet wording`.
-- PR checklist:
-1. Brief summary of changed resume sections.
-2. Confirmation that `make build` succeeded.
-3. Regenerated `Yash_Resume.pdf` (or a clear note if intentionally omitted).
+## Preview in WSL
+Use this command to open the PDF on this machine:
+`powershell.exe -NoProfile -Command "Start-Process 'C:\\Users\\yashj\\Documents\\Coding Projects\\Resume-Version-History\\Yash_Resume.pdf'"`
 
-## Security & Configuration Tips
-- Avoid introducing sensitive personal data beyond intended resume content.
-- Do not paste secrets/tokens into LaTeX source, commit messages, or logs.
+## Commit Expectations
+- Keep commits focused and small.
+- Use clear imperative messages (for example, `refine ALTR bullet wording`).
+- Before push, ensure the required validation above has passed on the latest edits.
