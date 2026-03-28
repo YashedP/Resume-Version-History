@@ -1,19 +1,27 @@
-build:
+.DEFAULT_GOAL := help
+
+help: ## Show available commands
+	@grep -E '^[a-zA-Z_-]+:.*## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*## "}; {printf "  %-10s %s\n", $$1, $$2}'
+
+build: ## Compile resume PDF from LaTeX source
 	pdflatex Yash_Resume.tex
+	rm -f Yash_Resume.aux Yash_Resume.log Yash_Resume.out
 
-setup:
-	@echo "Setting up LaTeX environment for resume compilation..."
-	@echo "Installing required LaTeX packages..."
-	sudo apt update
-	sudo apt install -y texlive-full
-	@echo "Updating TeX Live package manager..."
+open: ## Open the compiled resume PDF
+	open Yash_Resume.pdf
+
+PLATFORM ?= $(shell uname -s | tr '[:upper:]' '[:lower:]')
+
+setup: ## Install LaTeX dependencies (auto-detects OS, or pass PLATFORM=darwin|linux)
+ifeq ($(PLATFORM),darwin)
+	@echo "Installing LaTeX for macOS..."
+	brew install --cask basictex
 	sudo tlmgr update --self
-	@echo "Installing additional packages if needed..."
-	sudo tlmgr install fontawesome5 hyperref fancyhdr titlesec enumitem multicol tabularx
-	@echo "Updating font maps..."
-	sudo texhash
-	@echo "Setup complete! You can now run 'make build' to compile your resume."
+	sudo tlmgr install fontawesome5 hyperref fancyhdr titlesec enumitem preprint marvosym
+else
+	@echo "Installing LaTeX for Linux..."
+	sudo apt update && sudo apt install -y texlive-latex-extra texlive-fonts-extra
+endif
+	@echo "Setup complete! Run 'make build' to compile your resume."
 
-init: setup
-
-.PHONY: build setup init
+.PHONY: help build open setup
