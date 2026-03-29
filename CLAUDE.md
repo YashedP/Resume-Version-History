@@ -15,6 +15,7 @@ After each single-line modification only, run all checks below immediately; do n
 3. Confirm one-page output from log:
    `rg "Output written on Yash_Resume.pdf \\(1 page," Yash_Resume.log`
 4. If the page check fails, revise content/layout and rebuild until it passes.
+5. Confirm ATS extraction with `pdftotext Yash_Resume.pdf -` and verify key fields, dates, and keywords read correctly.
 
 This is a hard gate for commits and pushes.
 
