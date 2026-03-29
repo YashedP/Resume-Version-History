@@ -14,7 +14,10 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[unicode=true,hidelinks]{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{accsupp}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
@@ -63,6 +66,18 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
+
+% ATS-friendly text extraction helpers (no visual change)
+\newcommand{\ATSText}[2]{%
+  \BeginAccSupp{method=pdfstringdef,unicode,ActualText={#1}}%
+  #2%
+  \EndAccSupp{}%
+}
+\newcommand{\ATSIcon}[2]{%
+  \BeginAccSupp{method=pdfstringdef,unicode,ActualText={#1}}%
+  #2%
+  \EndAccSupp{}%
+}
 
 %-------------------------
 % Custom commands
@@ -123,10 +138,10 @@
     % Location is only good not in college because they can figure it out
     % REDACTED \\ \vspace{1pt}
     \small
-    \raisebox{-0.2\height}{\faEnvelope}~\href{mailto:yashjani144@gmail.com}{yashjani144@gmail.com} ~
-    \raisebox{-0.1\height}{\faPhone}~\href{tel:6312027811}{631-202-7811} ~
-    \raisebox{-0.2\height}{\faLinkedin}~\href{https://www.linkedin.com/in/yash-jani-8245bb26a/}{linkedin.com/in/Yash Jani} ~
-    US Citizen
+    \ATSIcon{Email: }{\raisebox{-0.2\height}{\faEnvelope}}~\href{mailto:yashjani144@gmail.com}{\ATSText{yashjani144@gmail.com}{yashjani144@gmail.com}} ~
+    \ATSIcon{ Phone: }{\raisebox{-0.1\height}{\faPhone}}~\href{tel:6312027811}{\ATSText{631-202-7811}{631-202-7811}} ~
+    \ATSIcon{ LinkedIn: }{\raisebox{-0.2\height}{\faLinkedin}}~\href{https://www.linkedin.com/in/yash-jani-8245bb26a/}{\ATSText{linkedin.com/in/yash-jani-8245bb26a}{linkedin.com/in/Yash Jani}} ~
+    \ATSText{ Work Authorization: US Citizen}{US Citizen}
             % \href{https://github.com/YashedP}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/YashedP}}
     \vspace{-10pt}
 \end{center}
@@ -182,11 +197,11 @@
     {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Java, Terraform, Redis}}{May 2025 -- Present}
     {Software Engineer I}{Melbourne, Florida}
     \resumeItemListStart
-      \resumeItem{Engineered a greenfield API Data Gateway on Lambda, SQS, and Step Functions, shipping v1 one week early testtesttesttesttesttest}
+      \resumeItem{Engineered a greenfield data governance platform with event-driven microservices using Lambda, SQS, and Step Functions, shipping v1 one week early to enforce masking and access policies across customer OLTP databases}
       \resumeItem{Architected a Go JWT authorizer (RFC 7519/8725) and a Java client SDK, securing all API Data Gateway traffic}
       \resumeItem{Reduced costs by \textbf{\$10,000+} and query latency \textbf{90\%+} via Redis migration, RDS indexes, and DynamoDB key redesign}
       \resumeItem{Migrated legacy Java ECS/gRPC to serverless Lambda and Step Functions via Terraform, reducing codebase complexity}
-      \resumeItem{Built observability from scratch with structured CloudWatch logging, custom metrics, and alarms across serverless pipeline}
+      \resumeItem{Built observability from scratch with structured CloudWatch logging, metrics and alarms across serverless pipelines}
     \resumeItemListEnd
   \resumeSubheading
     {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}

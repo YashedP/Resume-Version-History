@@ -17,7 +17,7 @@ ifeq ($(PLATFORM),darwin)
 	@echo "Installing LaTeX for macOS..."
 	brew install --cask basictex
 	sudo tlmgr update --self
-	sudo tlmgr install fontawesome5 hyperref fancyhdr titlesec enumitem preprint marvosym
+	sudo tlmgr install fontawesome5 hyperref fancyhdr titlesec enumitem preprint marvosym accsupp
 else
 	@echo "Installing LaTeX for Linux..."
 	sudo apt update && sudo apt install -y texlive-latex-extra texlive-fonts-extra
