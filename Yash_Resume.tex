@@ -17,6 +17,7 @@
 \usepackage[unicode=true,hidelinks]{hyperref}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{lmodern}
 \usepackage{accsupp}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
@@ -83,7 +84,7 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    \ATSText{#1}{#1}\vspace{-2pt}
   }
 }
 
@@ -95,10 +96,10 @@
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \ATSText{#1. #3. #4. #2.}{\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-9pt}
+    \end{tabular*}}\vspace{-9pt}
     % \end{tabular*}\vspace{-7pt}
 }
 
@@ -111,9 +112,9 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \ATSText{#1. #2.}{\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -179,12 +180,12 @@
 \vspace{-5pt}
   \section{Certifications}
     %\resumeSubHeadingListStart
-        \begin{multicols}{3}
+        \ATSText{Certifications: AWS Solutions Architect; AWS Cloud Practitioner.}{\begin{multicols}{3}
             \begin{itemize}[itemsep=-5pt, parsep=5pt]
               \item AWS Solutions Architect
               \item AWS Cloud Practitioner
             \end{itemize}
-        \end{multicols}
+        \end{multicols}}
 \vspace*{2.0\multicolsep}
 
 
@@ -194,7 +195,7 @@
   \resumeSubHeadingListStart
     \vspace{0pt}
     \resumeSubheading
-    {\textbf{ALTR} $|$ \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Java, Terraform, Redis}}{May 2025 -- Present}
+    {\textbf{ALTR} | \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Java, Terraform, Redis}}{May 2025 -- Present}
     {Software Engineer I}{Melbourne, Florida}
     \resumeItemListStart
       \resumeItem{Engineered a greenfield data governance platform with event-driven microservices using Lambda, SQS, and Step Functions, shipping v1 one week early to enforce masking and access policies across customer OLTP databases}
@@ -204,7 +205,7 @@
       \resumeItem{Built observability from scratch with structured CloudWatch logging, metrics and alarms across serverless pipelines}
     \resumeItemListEnd
   \resumeSubheading
-    {\textbf{Federated Learning of Medical Image Reconstruction} $|$ \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}
+    {\textbf{Federated Learning of Medical Image Reconstruction} | \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}
     {Undergraduate Researcher}{Melbourne, Florida}
     \resumeItemListStart
       \resumeItem{Boosted SPECT medical image ML pipeline accuracy by generating demographically-aligned synthetic training data}
@@ -213,7 +214,7 @@
       \resumeItem{Evaluated deployment strategies for secure model transport and UI access across distributed federated nodes}
     \resumeItemListEnd
   \resumeSubheading
-    {\textbf{Neural Transmissions Lab} $|$ \emph{Python, PyTorch, Blender, R, Matlab}}{Jan 2025 -- May 2025}      
+    {\textbf{Neural Transmissions Lab} | \emph{Python, PyTorch, Blender, R, Matlab}}{Jan 2025 -- May 2025}      
     {Undergraduate Researcher}{Melbourne, Florida}
     \resumeItemListStart
       \resumeItem{Integrated drone vision, navigation, and control into a Python pipeline, enabling swarm docking on space debris}
@@ -238,7 +239,7 @@
   \vspace{-5pt}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-        {\textbf{Receding Coastlines} $|$ \emph{Python, Flask, GeoPandas, PyTorch, Transformer, Google Earth Engine}}{2025}
+        {\textbf{Receding Coastlines} | \emph{Python, Flask, GeoPandas, PyTorch, Transformer, Google Earth Engine}}{2025}
         \resumeItemListStart
           \resumeItem{Built a geospatial forecasting platform visualizing 40 years of past Florida coastline data and transformer-based predictions}
           \resumeItem{Reduced query latency below 10 ms using a Stripe-inspired spatial tree backend architecture for coastline data retrieval}
@@ -246,7 +247,7 @@
         \resumeItemListEnd
       \vspace{-20pt}
       \resumeProjectHeading
-        {\textbf{HelpSignal} $|$ \emph{React Native, TypeScript, Python, Flask, AWS, Cloudflare Workers}}{2024}
+        {\textbf{HelpSignal} | \emph{React Native, TypeScript, Python, Flask, AWS, Cloudflare Workers}}{2024}
         \resumeItemListStart
           \resumeItem{Cut emergency response times by building a React Native app that transcribes calls and connects nearby medical pros}
           \resumeItem{Matched emergencies to responders by using a vector DB with BAAI embeddings for semantic search of expertise}
@@ -254,7 +255,7 @@
         \resumeItemListEnd
       \vspace{-20pt}
       \resumeProjectHeading
-        {\textbf{TravelAmulet} $|$ \emph{Next.js, React, TypeScript, Python, Flask, Prisma, TiDB Cloud, MySQL}}{2024}
+        {\textbf{TravelAmulet} | \emph{Next.js, React, TypeScript, Python, Flask, Prisma, TiDB Cloud, MySQL}}{2024}
         \resumeItemListStart
           \resumeItem{Matched users with travel destinations by building a quiz-based app using TiDB Vector Search and CountryWise API}
           \resumeItem{Boosted result accuracy by \textbf{20x} through metadata filtering and data cleaning in TiDB queries}
@@ -351,14 +352,14 @@
   \vspace{-5pt}
   \section{Relevant Coursework}
     %\resumeSubHeadingListStart
-        \begin{multicols}{4}
+        \ATSText{Relevant Coursework: Data Structures 2; Prog Lang Concepts; Operating Systems; Formal Lang/Auto.}{\begin{multicols}{4}
             \begin{itemize}[itemsep=-5pt, parsep=3pt]
                 \item Data Structures 2
                 \item Prog Lang Concepts
                 \item Operating Systems
                 \item Formal Lang/Auto
             \end{itemize}
-        \end{multicols}
+        \end{multicols}}
         \vspace*{2.0\multicolsep}
     %\resumeSubHeadingListEnd
 
