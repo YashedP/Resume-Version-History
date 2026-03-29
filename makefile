@@ -7,6 +7,8 @@ build: ## Compile resume PDF from LaTeX source
 	pdflatex Yash_Resume.tex
 	rm -f Yash_Resume.aux Yash_Resume.log Yash_Resume.out
 
+ats: ; @pdftotext Yash_Resume.pdf - ## Print extracted text for ATS validation
+
 open: ## Open the compiled resume PDF
 	open Yash_Resume.pdf
 
@@ -15,12 +17,12 @@ PLATFORM ?= $(shell uname -s | tr '[:upper:]' '[:lower:]')
 setup: ## Install LaTeX dependencies (auto-detects OS, or pass PLATFORM=darwin|linux)
 ifeq ($(PLATFORM),darwin)
 	@echo "Installing LaTeX for macOS..."
-	brew install --cask basictex
+	brew install --cask basictex && brew install poppler
 	sudo tlmgr update --self
 	sudo tlmgr install fontawesome5 hyperref fancyhdr titlesec enumitem preprint marvosym accsupp
 else
 	@echo "Installing LaTeX for Linux..."
-	sudo apt update && sudo apt install -y texlive-latex-extra texlive-fonts-extra
+	sudo apt update && sudo apt install -y texlive-latex-extra texlive-fonts-extra poppler-utils
 endif
 	@echo "Setup complete! Run 'make build' to compile your resume."
 

@@ -2,3 +2,5 @@
 *.log
 *.out
 *.pdf
+.DS_Store
+Yash_Resume.txt
