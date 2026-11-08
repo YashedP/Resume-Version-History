@@ -4,8 +4,8 @@ help: ## Show available commands
 	@grep -E '^[a-zA-Z_-]+:.*## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*## "}; {printf "  %-10s %s\n", $$1, $$2}'
 
 build: ## Compile resume PDF from LaTeX source
-	pdflatex Yash_Resume.tex
-	rm -f Yash_Resume.aux Yash_Resume.log Yash_Resume.out
+	pdflatex -interaction=nonstopmode -halt-on-error Yash_Resume.tex
+	pdflatex -interaction=nonstopmode -halt-on-error Yash_Resume.tex
 
 ats: ; @pdftotext Yash_Resume.pdf - ## Print extracted text for ATS validation
 

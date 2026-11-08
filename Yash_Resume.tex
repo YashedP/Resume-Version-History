@@ -8,7 +8,7 @@
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\usepackage[letterpaper,left=0.4in,right=0.4in,top=0.5in,bottom=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
@@ -24,8 +24,6 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
 
@@ -43,16 +41,10 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-\fancyfoot{}
+\setlength{\footskip}{5pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.6in}
 
 \urlstyle{same}
 
@@ -61,9 +53,10 @@
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
+\titlespacing*{\section}{0pt}{6pt}{3pt}
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -84,49 +77,47 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    \ATSText{#1}{#1}\vspace{-2pt}
+    \ATSText{#1}{#1}
   }
 }
 
 \newcommand{\classesList}[4]{
     \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
+        {#1 #2 #3 #4}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \ATSText{#1. #2. #3. #4.}{\begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+  \item
+    \ATSText{#1. #2. #3. #4.}{\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2} \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}}\vspace{-9pt}
-    % \end{tabular*}\vspace{-7pt}
+    \end{tabular*}}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \ATSText{#1. #2.}{\begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \ATSText{#1. #2.}{\begin{tabular*}{\linewidth}[t]{l@{\extracolsep{\fill}}r}
       \small#1 & \textbf{\small #2}\\
-    \end{tabular*}}\vspace{-7pt}
+    \end{tabular*}}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\setlist[itemize]{leftmargin=0.2in, labelwidth=0.1in, labelsep=0.05in}
+\setlist[itemize]{leftmargin=0.2in, labelwidth=0.1in, labelsep=0.05in} % Shared bullet indentation.
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0pt, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=4pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[topsep=1pt, partopsep=0pt, parsep=0pt, itemsep=1.5pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,9 +125,9 @@
 
 \begin{document}
 
-\begin{center}
-  {\Huge \scshape Yash Jani} \\ \vspace{1pt}
-  \ATSText{Software Engineer with experience in Go, Node.js, AWS, and distributed systems. Built serverless microservices, SDKs, and ML/data platforms across production and research environments.}{\raisebox{0pt}[0pt][0pt]{\makebox[0pt][l]{\textcolor{white}{.}}}}
+\setlength{\topsep}{0pt}\begin{center}
+  {\Huge \scshape Yash Jani} \\[1pt]
+
     % Location is only good not in college because they can figure it out
     % REDACTED \\ \vspace{1pt}
     \small
@@ -145,65 +136,28 @@
     \ATSIcon{ LinkedIn: }{\raisebox{-0.2\height}{\faLinkedin}}~\href{https://www.linkedin.com/in/yash-jani-8245bb26a/}{\ATSText{linkedin.com/in/yash-jani-8245bb26a}{linkedin.com/in/Yash Jani}} ~
     % \ATSText{ Work Authorization: US Citizen}{US Citizen}
     ~\ATSIcon{ GitHub: }{\raisebox{-0.2\height}{\faGithub}}~\href{https://github.com/YashedP}{\ATSText{github.com/YashedP}{github.com/YashedP}} ~US Citizen
-    \vspace{-10pt}
 \end{center}
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading      
-      {Florida Institute of Technology -- B.S. Computer Science}{Graduated Dec 2025}
-      {\textbf{GPA: 3.8} | Melbourne, Florida}{Aug 2023 -- Dec 2025}
-  \resumeSubHeadingListEnd
-  \vspace{-5pt}
   % \resumeSubHeadingListStart
   %   \resumeSubheading      
   %     {Sachem North High School}{Sep 2019 -- June 2023}
   %     {Advanced Regents Diploma}{Ronkonkoma, New York}
   % \resumeSubHeadingListEnd
   
-% %------RELEVANT COURSEWORK-------
-%   \vspace{-5pt}
-%   \section{Relevant Coursework}
-%     %\resumeSubHeadingListStart
-%         \begin{multicols}{4}
-%             \begin{itemize}[itemsep=-5pt, parsep=3pt]
-%                 \item Data Structures 2
-%                 \item Prog Lang Concepts
-%                 \item Operating Systems
-%                 \item Formal Lang/Auto
-%             \end{itemize}
-%         \end{multicols}
-%         \vspace*{2.0\multicolsep}
-%     %\resumeSubHeadingListEnd
-
-%--------CERTIFICATIONS-------
-\vspace{-5pt}
-  \section{Certifications}
-    %\resumeSubHeadingListStart
-        \ATSText{Certifications: AWS Solutions Architect; AWS Cloud Practitioner.}{\begin{multicols}{3}
-            \begin{itemize}[itemsep=-5pt, parsep=5pt]
-              \item AWS Solutions Architect
-              \item AWS Cloud Practitioner
-            \end{itemize}
-        \end{multicols}}
-\vspace*{2.0\multicolsep}
 
 
 %-----------EXPERIENCE-----------
-\vspace{0pt}
 \section{Experience}
   \resumeSubHeadingListStart
-    \vspace{0pt}
     \resumeSubheading
-    {\textbf{ALTR} | \emph{Go, Node.js, AWS (Lambda, Step Functions, DynamoDB, RDS, S3), Java, Terraform, Redis}}{May 2025 -- Present}
+    {\textbf{ALTR} | \emph{Go, Java, Node.js, AWS, Terraform, DynamoDB, OAuth/OIDC, AgentCore}}{May 2025 -- Present}
     {Software Engineer I}{Melbourne, Florida}
     \resumeItemListStart
-      \resumeItem{Engineered a greenfield data governance platform with event-driven, distributed microservices using Lambda, SQS, and Step Functions, shipping v1 one week early to enforce masking and access policies across customer OLTP databases}
-      \resumeItem{Architected a Go JWT authorizer (RFC 7519/8725) and a Java client SDK, securing all API Data Gateway traffic}
-      \resumeItem{Reduced costs by \textbf{\$10,000+} and query latency \textbf{90\%+} via Redis migration, RDS indexes, and DynamoDB key redesign}
-      \resumeItem{Migrated legacy Java ECS/gRPC to serverless Lambda and Step Functions via Terraform, reducing codebase complexity}
-      \resumeItem{Built observability from scratch with structured CloudWatch logging, metrics and alarms across serverless pipelines}
+      \resumeItem{Built a zero-trust identity platform for AI agents, implementing on-behalf-of (OBO) delegation, OAuth token exchange and an OpenID Connect issuer to authenticate delegated user identity across internal services}
+      \resumeItem{Architected a multi-tenant integration platform for Splunk, Slack, webhooks and ServiceNow, isolating untrusted outbound requests in a reusable egress VPC and protecting customer secrets with per-tenant envelope encryption}
+      \resumeItem{Co-led development of a serverless audit-reporting service, designing its DynamoDB model and connecting report events and database activity alerts to a shared event-integration platform for outbound customer notifications}
+      \resumeItem{Co-developed an AI assistant on AWS AgentCore across runtime, memory and evaluations, improving context management to limit context degradation during agent interactions}
+      \resumeItem{Replaced legacy Java ECS/gRPC data-management components with asynchronous Lambda and Step Functions workflows, removing obsolete code and abstraction layers to simplify maintenance}
     \resumeItemListEnd
   \resumeSubheading
     {\textbf{Federated Learning of Medical Image Reconstruction} | \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}
@@ -211,14 +165,17 @@
     \resumeItemListStart
       \resumeItem{Boosted SPECT medical image ML pipeline accuracy by generating demographically-aligned synthetic training data}
       \resumeItem{Automated data cataloging and augmentation to accelerate model training and expand demographic representation}
+
       \resumeItem{Integrated federated learning using Flower to enable secure, decentralized model training with contributor authentication}
       \resumeItem{Evaluated deployment strategies for secure model transport and UI access across distributed federated nodes}
+
     \resumeItemListEnd
   \resumeSubheading
     {\textbf{Neural Transmissions Lab} | \emph{Python, PyTorch, Blender, R, Matlab}}{Jan 2025 -- May 2025}      
     {Undergraduate Researcher}{Melbourne, Florida}
     \resumeItemListStart
       \resumeItem{Integrated drone vision, navigation, and control into a Python pipeline, enabling swarm docking on space debris}
+
       \resumeItem{Applied matrix projections to camera input, converting point clouds into APF vectors for collision-free rendezvous}
       \resumeItem{Developed a space debris simulation using the YOLOv9 object detection model and 3D Gaussian Splatting}
       \resumeItem{Validated real-time control and vision performance of the 'MARVIN' autonomous system on an NVIDIA Jetson Orin}
@@ -235,10 +192,15 @@
 
 
 %-----------PROJECTS-----------
-\vspace{-17pt}
 \section{Projects}
-  \vspace{-5pt}
     \resumeSubHeadingListStart
+      \resumeProjectHeading
+        {\textbf{Anchor} | \href{https://anchor.yashjani.com}{anchor.yashjani.com} | \emph{Go, Next.js, TypeScript, PostgreSQL}}{2026}
+        \resumeItemListStart
+          \resumeItem{Built recurring push reminders with urgency escalation, snoozing and acknowledgment/completion tracking}
+          \resumeItem{Made notification delivery recoverable after restarts using database-backed workers, expiring leases and retries}
+          \resumeItem{Implemented scoped API keys, expiring response links and AES-256-GCM encryption for provider credentials}
+        \resumeItemListEnd
       \resumeProjectHeading
         {\textbf{Receding Coastlines} | \emph{Python, Flask, GeoPandas, PyTorch, Transformer, Google Earth Engine}}{2025}
         \resumeItemListStart
@@ -246,15 +208,6 @@
           \resumeItem{Reduced query latency below 10 ms using a Stripe-inspired spatial tree backend architecture for coastline data retrieval}
           \resumeItem{Trained an 8-layer, 8-head transformer model with positional encoding to forecast shoreline evolution through 2096}
         \resumeItemListEnd
-      \vspace{-20pt}
-      \resumeProjectHeading
-        {\textbf{HelpSignal} | \emph{React Native, TypeScript, Python, Flask, AWS, Cloudflare Workers}}{2024}
-        \resumeItemListStart
-          \resumeItem{Cut emergency response times by building a React Native app that transcribes calls and connects nearby medical pros}
-          \resumeItem{Matched emergencies to responders by using a vector DB with BAAI embeddings for semantic search of expertise}
-          \resumeItem{Enabled real-time awareness by storing active incidents on Amazon RDS and displaying them on an interactive map}
-        \resumeItemListEnd
-      \vspace{-20pt}
       \resumeProjectHeading
         {\textbf{TravelAmulet} | \emph{Next.js, React, TypeScript, Python, Flask, Prisma, TiDB Cloud, MySQL}}{2024}
         \resumeItemListStart
@@ -266,9 +219,8 @@
 
 
 %-----------PROGRAMMING SKILLS-----------
-\vspace{-20pt}
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
+ \begin{itemize}[leftmargin=0pt, label={}, topsep=0pt, partopsep=0pt, parsep=0pt, itemsep=0pt]
     \small{\item{
       \begin{comment}
         Languages:
@@ -309,13 +261,14 @@
         - Snowflake
         - Databricks
       \end{comment}
-      \textbf{Languages}{: Go, JavaScript, Java, SQL, Python, TypeScript, Rust, R, HTML/CSS, C/C++} \\
-      \textbf{Cloud \& Infrastructure}{: AWS, Lambda, API Gateway, DynamoDB, RDS, SQS, S3, Terraform, Docker, CI/CD} \\
-      \textbf{Frameworks}{: Node.js, Express, Fiber, Flask, React/Next.js} \\
-      \textbf{Data \& Platforms}{: Redis, Snowflake, Databricks, Git} \\
+      \textbf{Languages}{: Go, Java, Python, TypeScript, JavaScript, SQL, C/C++} \\
+      \textbf{Backend \& Web}{: Node.js, Express, Fiber, Flask, gRPC, React, Next.js} \\
+      \textbf{AWS \& DevOps}{: Lambda, Step Functions, API Gateway, SQS, S3, CloudWatch, Terraform, Docker, GitLab CI/CD} \\
+      \textbf{Data \& Storage}{: DynamoDB, MySQL/MariaDB, Redis, Snowflake, Databricks} \\
+      \textbf{Identity \& Security}{: OAuth 2.0, OpenID Connect (OIDC), JWT/JWS, AWS KMS, envelope encryption} \\
+      \textbf{AI \& ML}{: Amazon Bedrock AgentCore, PyTorch, Flower, LLM memory, evaluations, context management} \\
     }}
  \end{itemize}
-\vspace{-15pt}
 
 
 % %-----------INVOLVEMENT---------------
@@ -349,19 +302,6 @@
 %         \vspace*{2.0\multicolsep}
 %     %\resumeSubHeadingListEnd
 
-%------RELEVANT COURSEWORK-------
-  \vspace{-5pt}
-  \section{Relevant Coursework}
-    %\resumeSubHeadingListStart
-        \ATSText{Data Structures 2; Programming Language Concepts; Operating Systems; Formal Languages and Automata.}{\begin{multicols}{4}
-            \begin{itemize}[itemsep=-5pt, parsep=3pt]
-                \item Data Structures 2
-                \item Prog Lang Concepts
-                \item Operating Systems
-                \item Formal Lang/Auto
-            \end{itemize}
-        \end{multicols}}
-        \vspace*{2.0\multicolsep}
-    %\resumeSubHeadingListEnd
 
+\section{Education \& Certifications}\noindent{\small\textbf{Florida Institute of Technology} | B.S. Computer Science | Dec 2025 | GPA: 3.8\\[2pt]\textbf{Certifications:} AWS Solutions Architect | AWS Cloud Practitioner}
 \end{document}
