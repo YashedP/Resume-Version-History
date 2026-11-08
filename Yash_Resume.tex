@@ -153,30 +153,30 @@
     {\textbf{ALTR} | \emph{Go, Java, Node.js, AWS, Terraform, DynamoDB, OAuth/OIDC, AgentCore}}{May 2025 -- Present}
     {Software Engineer I}{Melbourne, Florida}
     \resumeItemListStart
-      \resumeItem{Built a zero-trust identity platform for AI agents, implementing on-behalf-of (OBO) delegation, OAuth token exchange and an OpenID Connect issuer to authenticate delegated user identity across internal services}
-      \resumeItem{Architected a multi-tenant integration platform for Splunk, Slack, webhooks and ServiceNow, isolating untrusted outbound requests in a reusable egress VPC and protecting customer secrets with per-tenant envelope encryption}
-      \resumeItem{Co-led development of a serverless audit-reporting service, designing its DynamoDB model and connecting report events and database activity alerts to a shared event-integration platform for outbound customer notifications}
-      \resumeItem{Co-developed an AI assistant on AWS AgentCore across runtime, memory and evaluations, improving context management to limit context degradation during agent interactions}
-      \resumeItem{Replaced legacy Java ECS/gRPC data-management components with asynchronous Lambda and Step Functions workflows, removing obsolete code and abstraction layers to simplify maintenance}
+      \resumeItem{Designed and implemented zero-trust, on-behalf-of (OBO) user delegation for AI agents using OAuth token exchange, an OpenID Connect issuer, signed identity proofs and an internal API authorizer}
+      \resumeItem{Architected a multi-tenant, event-driven integration platform for Splunk, Slack, webhooks and ServiceNow, isolating untrusted outbound requests in an egress VPC and protecting customer secrets with per-tenant envelope encryption}
+      \resumeItem{Co-led scheduled audit reporting, designing a single-table DynamoDB model for report metadata and tenant configuration, connecting report events to customer notifications and adding integration tests against AWS services}
+      \resumeItem{Migrated legacy Java ECS/gRPC data-management components to a serverless architecture using asynchronous Lambda and Step Functions workflows, removing obsolete code and SDK abstraction layers}
+      \resumeItem{Co-built an AI assistant on AWS AgentCore across runtime, memory and evaluations, implementing rolling summarization to keep extended conversations within the model's context budget}
     \resumeItemListEnd
   \resumeSubheading
-    {\textbf{Federated Learning of Medical Image Reconstruction} | \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}
-    {Undergraduate Researcher}{Melbourne, Florida}
+    {\textbf{Florida Institute of Technology} | \emph{Python, PyTorch, Flower}}{Jan 2025 -- Dec 2025}
+    {Undergraduate Researcher | Federated Medical Image Reconstruction}{Melbourne, Florida}
     \resumeItemListStart
-      \resumeItem{Boosted SPECT medical image ML pipeline accuracy by generating demographically-aligned synthetic training data}
-      \resumeItem{Automated data cataloging and augmentation to accelerate model training and expand demographic representation}
+      \resumeItem{Generated synthetic SPECT training data across demographic profiles using XCAT models and GATE simulations}
+      \resumeItem{Automated data cataloging and augmentation for synthetic SPECT training datasets}
 
-      \resumeItem{Integrated federated learning using Flower to enable secure, decentralized model training with contributor authentication}
-      \resumeItem{Evaluated deployment strategies for secure model transport and UI access across distributed federated nodes}
+      \resumeItem{Integrated Flower-based federated training with contributor authentication across distributed training nodes}
+      \resumeItem{Evaluated model-transfer and UI deployment options for distributed federated-learning nodes}
 
     \resumeItemListEnd
   \resumeSubheading
-    {\textbf{Neural Transmissions Lab} | \emph{Python, PyTorch, Blender, R, Matlab}}{Jan 2025 -- May 2025}      
-    {Undergraduate Researcher}{Melbourne, Florida}
+    {\textbf{Florida Institute of Technology} | \emph{Python, PyTorch, Blender, R, MATLAB}}{Jan 2025 -- May 2025}
+    {Undergraduate Researcher | NEural TransmissionS (NETS) Lab}{Melbourne, Florida}
     \resumeItemListStart
-      \resumeItem{Integrated drone vision, navigation, and control into a Python pipeline, enabling swarm docking on space debris}
+      \resumeItem{Integrated drone vision, navigation and control in a Python pipeline for simulated docking with space debris}
 
-      \resumeItem{Applied matrix projections to camera input, converting point clouds into APF vectors for collision-free rendezvous}
+      \resumeItem{Computed artificial-potential-field navigation vectors from camera-derived point clouds for rendezvous research}
       \resumeItem{Developed a space debris simulation using the YOLOv9 object detection model and 3D Gaussian Splatting}
       \resumeItem{Validated real-time control and vision performance of the 'MARVIN' autonomous system on an NVIDIA Jetson Orin}
     \resumeItemListEnd
@@ -205,15 +205,15 @@
         {\textbf{Receding Coastlines} | \emph{Python, Flask, GeoPandas, PyTorch, Transformer, Google Earth Engine}}{2025}
         \resumeItemListStart
           \resumeItem{Built a geospatial forecasting platform visualizing 40 years of past Florida coastline data and transformer-based predictions}
-          \resumeItem{Reduced query latency below 10 ms using a Stripe-inspired spatial tree backend architecture for coastline data retrieval}
+          \resumeItem{Co-built a four-way segment tree with bounding-box queries to retrieve coastline geometry for the map viewport}
           \resumeItem{Trained an 8-layer, 8-head transformer model with positional encoding to forecast shoreline evolution through 2096}
         \resumeItemListEnd
       \resumeProjectHeading
         {\textbf{TravelAmulet} | \emph{Next.js, React, TypeScript, Python, Flask, Prisma, TiDB Cloud, MySQL}}{2024}
         \resumeItemListStart
           \resumeItem{Matched users with travel destinations by building a quiz-based app using TiDB Vector Search and CountryWise API}
-          \resumeItem{Boosted result accuracy by \textbf{20x} through metadata filtering and data cleaning in TiDB queries}
-          \resumeItem{Increased engagement by using GPT-4o mini to generate personalized country explanations from quiz results}          
+          \resumeItem{Combined vector similarity search with metadata filters to match destinations to users' preferences and constraints}
+          \resumeItem{Generated personalized destination explanations from quiz responses using GPT-4o mini}
         \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -262,9 +262,9 @@
         - Databricks
       \end{comment}
       \textbf{Languages}{: Go, Java, Python, TypeScript, JavaScript, SQL, C/C++} \\
-      \textbf{Backend \& Web}{: Node.js, Express, Fiber, Flask, gRPC, React, Next.js} \\
+      \textbf{Backend \& Web}{: REST APIs, Node.js, Express, Fiber, Flask, gRPC, React, Next.js} \\
       \textbf{AWS \& DevOps}{: Lambda, Step Functions, API Gateway, SQS, S3, CloudWatch, Terraform, Docker, GitLab CI/CD} \\
-      \textbf{Data \& Storage}{: DynamoDB, MySQL/MariaDB, Redis, Snowflake, Databricks} \\
+      \textbf{Data \& Storage}{: PostgreSQL, DynamoDB, MySQL/MariaDB, Redis, Snowflake, Databricks} \\
       \textbf{Identity \& Security}{: OAuth 2.0, OpenID Connect (OIDC), JWT/JWS, AWS KMS, envelope encryption} \\
       \textbf{AI \& ML}{: Amazon Bedrock AgentCore, PyTorch, Flower, LLM memory, evaluations, context management} \\
     }}
@@ -303,5 +303,5 @@
 %     %\resumeSubHeadingListEnd
 
 
-\section{Education \& Certifications}\noindent{\small\textbf{Florida Institute of Technology} | B.S. Computer Science | Dec 2025 | GPA: 3.8\\[2pt]\textbf{Certifications:} AWS Solutions Architect | AWS Cloud Practitioner}
+\section{Education \& Certifications}\noindent{\small\textbf{Florida Institute of Technology} | B.S. Computer Science | Dec 2025 | GPA: 3.8\\[2pt]\textbf{Certifications:} AWS Solutions Architect - Associate | AWS Cloud Practitioner}
 \end{document}
